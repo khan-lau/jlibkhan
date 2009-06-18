@@ -1,4 +1,0 @@
-2009-6-8 4:21:55 org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
-信息: Creating Service {http://cxf.apache.org}CBM from class com.khan.webservice.CBM
-2009-6-8 4:21:57 org.apache.cxf.endpoint.ServerImpl initDestination
-信息: Setting the server's publish address to be http://localhost:80/CBM

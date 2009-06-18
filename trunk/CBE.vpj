@@ -404,52 +404,8 @@
 			<F N="src/com/khan/net/HttpSend.java"/>
 			<F N="src/com/khan/net/MyFtpClient.java"/>
 		</Folder>
-		<Folder
-			Name="com.khan.webservice"
-			Type="Package">
-			<F N="src/com/khan/webservice/AreaManager.java"/>
-			<F N="src/com/khan/webservice/BasicAuthAuthorizationInterceptor.java"/>
-			<F N="src/com/khan/webservice/CBM.java"/>
-			<F N="src/com/khan/webservice/CBMImpl.java"/>
-			<F N="src/com/khan/webservice/CbmOperation.java"/>
-		</Folder>
-		<Folder
-			Name="com.khan.webservice.bean"
-			Type="Package">
-			<F N="src/com/khan/webservice/bean/AreaDetail.java"/>
-			<F N="src/com/khan/webservice/bean/Bsc.java"/>
-			<F N="src/com/khan/webservice/bean/BscType.java"/>
-			<F N="src/com/khan/webservice/bean/Cell.java"/>
-			<F N="src/com/khan/webservice/bean/City.java"/>
-			<F N="src/com/khan/webservice/bean/SendList.java"/>
-			<F N="src/com/khan/webservice/bean/UserInfo.java"/>
-		</Folder>
 		<Folder Name="conf">
 			<F N="conf/CBE.ini"/>
-		</Folder>
-		<Folder Name="dist">
-			<F N="dist/CBE.jar"/>
-		</Folder>
-		<Folder Name="lib">
-			<F N="lib/commons-logging-1.1.1.jar"/>
-			<F N="lib/cxf-2.2.jar"/>
-			<F N="lib/cxf-manifest.jar"/>
-			<F N="lib/geronimo-activation_1.1_spec-1.0.2.jar"/>
-			<F N="lib/geronimo-annotation_1.0_spec-1.1.1.jar"/>
-			<F N="lib/geronimo-jaxws_2.1_spec-1.0.jar"/>
-			<F N="lib/geronimo-stax-api_1.0_spec-1.0.1.jar"/>
-			<F N="lib/geronimo-ws-metadata_2.0_spec-1.1.2.jar"/>
-			<F N="lib/jaxb-api-2.1.jar"/>
-			<F N="lib/jaxb-impl-2.1.9.jar"/>
-			<F N="lib/jetty-6.1.15.jar"/>
-			<F N="lib/jetty-util-6.1.15.jar"/>
-			<F N="lib/saaj-api-1.3.jar"/>
-			<F N="lib/saaj-impl-1.3.2.jar"/>
-			<F N="lib/servlet-api-2.5-6.1.3.jar"/>
-			<F N="lib/wsdl4j-1.6.2.jar"/>
-			<F N="lib/wstx-asl-3.2.6.jar"/>
-			<F N="lib/xml-resolver-1.2.jar"/>
-			<F N="lib/XmlSchema-1.4.4.jar"/>
 		</Folder>
 		<F N="build.xml"/>
 	</Files>
