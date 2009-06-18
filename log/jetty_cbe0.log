@@ -1,0 +1,44 @@
+2009-6-10 2:08:14 org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromClass
+信息: Creating Service {http://cxf.apache.org}CBM from class com.khan.webservice.CBM
+2009-6-10 2:08:15 org.apache.cxf.endpoint.ServerImpl initDestination
+信息: Setting the server's publish address to be http://localhost:80/CBM
+2009-6-10 2:28:32 org.apache.cxf.phase.PhaseInterceptorChain doIntercept
+信息: Interceptor has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: No such operation:  (HTTP GET PATH_INFO: /CBM)
+	at org.apache.cxf.interceptor.URIMappingInterceptor.handleMessage(URIMappingInterceptor.java:77)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:236)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:89)
+	at org.apache.cxf.transport.http_jetty.JettyHTTPDestination.serviceRequest(JettyHTTPDestination.java:302)
+	at org.apache.cxf.transport.http_jetty.JettyHTTPDestination.doService(JettyHTTPDestination.java:265)
+	at org.apache.cxf.transport.http_jetty.JettyHTTPHandler.handle(JettyHTTPHandler.java:70)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:324)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:535)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:865)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:539)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:520)
+2009-6-10 2:28:32 org.apache.cxf.phase.PhaseInterceptorChain doIntercept
+信息: Interceptor has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: No such operation:  (HTTP GET PATH_INFO: /CBM)
+	at org.apache.cxf.interceptor.URIMappingInterceptor.handleMessage(URIMappingInterceptor.java:77)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:236)
+	at org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:89)
+	at org.apache.cxf.transport.http_jetty.JettyHTTPDestination.serviceRequest(JettyHTTPDestination.java:302)
+	at org.apache.cxf.transport.http_jetty.JettyHTTPDestination.doService(JettyHTTPDestination.java:265)
+	at org.apache.cxf.transport.http_jetty.JettyHTTPHandler.handle(JettyHTTPHandler.java:70)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java:765)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:324)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:535)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:865)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:539)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:212)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:404)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:520)
