@@ -381,7 +381,21 @@ public class SMPTime {
 
 
   public static long getDataTime(Date date){
-    return getDateTime(date.getYear(), date.getMonth(), date.getDay(), date.getHours(), date.getMinutes(), date.getSeconds());
+    Calendar now = null;
+    long d = 0;
+    try{
+      now = Calendar.getInstance();
+      now.setTime(date);
+      d = now.get(Calendar.SECOND)
+             + 100L * now.get(Calendar.MINUTE)
+             + 10000L * now.get(Calendar.HOUR_OF_DAY)
+             + 1000000L * now.get(Calendar.DATE)
+             + 100000000L * (now.get(Calendar.MONTH) + 1)
+             + 10000000000L * now.get(Calendar.YEAR);
+    }finally{
+      now  = null;
+    }
+    return d;
   }
 
   /**
