@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="CBM" targetNamespace="http://cxf.apache.org" xmlns:ns1="http://schemas.xmlsoap.org/wsdl/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://cxf.apache.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://jaxb.dev.java.net/array" xmlns="http://jaxb.dev.java.net/array" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:complexType final="#all" name="doubleArray">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="item" nillable="true" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://cxf.apache.org" xmlns:ns0="http://jaxb.dev.java.net/array" xmlns:tns="http://cxf.apache.org" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:import namespace="http://jaxb.dev.java.net/array"/>
+    <xsd:element name="modifyArea" type="tns:modifyArea"/>
+    <xsd:complexType name="modifyArea">
+        <xsd:sequence>
+            <xsd:element name="RegionFlag" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="ReginName" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="Region" type="ns0:doubleArray"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="modifyAreaResponse" type="tns:modifyAreaResponse"/>
+    <xsd:complexType name="modifyAreaResponse">
+        <xsd:sequence>
+            <xsd:element name="Result" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="queryArea" type="tns:queryArea"/>
+    <xsd:complexType name="queryArea">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="ReginName" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="queryAreaResponse" type="tns:queryAreaResponse"/>
+    <xsd:complexType name="queryAreaResponse">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="Area" type="ns0:doubleArray"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="getReport" type="tns:getReport"/>
+    <xsd:complexType name="getReport">
+        <xsd:sequence>
+            <xsd:element name="MsgID" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="getReportResponse" type="tns:getReportResponse"/>
+    <xsd:complexType name="getReportResponse">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="Report" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="sendCbm" type="tns:sendCbm"/>
+    <xsd:complexType name="sendCbm">
+        <xsd:sequence>
+            <xsd:element name="Channel" type="xsd:int"/>
+            <xsd:element name="RegionFlag" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="ReginName" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="Region" type="ns0:doubleArray"/>
+            <xsd:element name="Level" type="xsd:int"/>
+            <xsd:element name="Geographical_Scope" type="xsd:int"/>
+            <xsd:element name="Messge_Code" type="xsd:int"/>
+            <xsd:element name="Messge_Update_Number" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="Format_Code" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CbmMessage" type="xsd:string"/>
+            <xsd:element name="StartTime" type="xsd:long"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="sendCbmResponse" type="tns:sendCbmResponse"/>
+    <xsd:complexType name="sendCbmResponse">
+        <xsd:sequence>
+            <xsd:element name="MsgID" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="sendCbmAT" type="tns:sendCbmAT"/>
+    <xsd:complexType name="sendCbmAT">
+        <xsd:sequence>
+            <xsd:element name="Channel" type="xsd:int"/>
+            <xsd:element name="RegionFlag" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="ReginName" type="xsd:string"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" name="Region" type="ns0:doubleArray"/>
+            <xsd:element name="Level" type="xsd:int"/>
+            <xsd:element name="Geographical_Scope" type="xsd:int"/>
+            <xsd:element name="Messge_Code" type="xsd:int"/>
+            <xsd:element name="Messge_Update_Number" type="xsd:int"/>
+            <xsd:element minOccurs="0" name="Format_Code" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CbmMessage" type="xsd:string"/>
+            <xsd:element name="StartTime" type="xsd:long"/>
+            <xsd:element name="Interval" type="xsd:int"/>
+            <xsd:element name="EndTime" type="xsd:long"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="sendCbmATResponse" type="tns:sendCbmATResponse"/>
+    <xsd:complexType name="sendCbmATResponse">
+        <xsd:sequence>
+            <xsd:element name="MsgID" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="deleteArea" type="tns:deleteArea"/>
+    <xsd:complexType name="deleteArea">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="ReginName" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="deleteAreaResponse" type="tns:deleteAreaResponse"/>
+    <xsd:complexType name="deleteAreaResponse">
+        <xsd:sequence>
+            <xsd:element name="Result" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="deleteAreaResponse">
+    <wsdl:part element="tns:deleteAreaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendCbm">
+    <wsdl:part element="tns:sendCbm" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendCbmATResponse">
+    <wsdl:part element="tns:sendCbmATResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modifyAreaResponse">
+    <wsdl:part element="tns:modifyAreaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getReportResponse">
+    <wsdl:part element="tns:getReportResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteArea">
+    <wsdl:part element="tns:deleteArea" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryAreaResponse">
+    <wsdl:part element="tns:queryAreaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendCbmResponse">
+    <wsdl:part element="tns:sendCbmResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendCbmAT">
+    <wsdl:part element="tns:sendCbmAT" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getReport">
+    <wsdl:part element="tns:getReport" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryArea">
+    <wsdl:part element="tns:queryArea" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modifyArea">
+    <wsdl:part element="tns:modifyArea" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CBM">
+    <wsdl:operation name="modifyArea">
+      <wsdl:input message="tns:modifyArea" name="modifyArea">
+    </wsdl:input>
+      <wsdl:output message="tns:modifyAreaResponse" name="modifyAreaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryArea">
+      <wsdl:input message="tns:queryArea" name="queryArea">
+    </wsdl:input>
+      <wsdl:output message="tns:queryAreaResponse" name="queryAreaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReport">
+      <wsdl:input message="tns:getReport" name="getReport">
+    </wsdl:input>
+      <wsdl:output message="tns:getReportResponse" name="getReportResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendCbm">
+      <wsdl:input message="tns:sendCbm" name="sendCbm">
+    </wsdl:input>
+      <wsdl:output message="tns:sendCbmResponse" name="sendCbmResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendCbmAT">
+      <wsdl:input message="tns:sendCbmAT" name="sendCbmAT">
+    </wsdl:input>
+      <wsdl:output message="tns:sendCbmATResponse" name="sendCbmATResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteArea">
+      <wsdl:input message="tns:deleteArea" name="deleteArea">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteAreaResponse" name="deleteAreaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CBMSoapBinding" type="tns:CBM">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="modifyArea">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="modifyArea">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="modifyAreaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryArea">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="queryArea">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="queryAreaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendCbm">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sendCbm">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sendCbmResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteArea">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="deleteArea">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteAreaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendCbmAT">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sendCbmAT">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sendCbmATResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CBM">
+    <wsdl:port binding="tns:CBMSoapBinding" name="CBM">
+      <soap:address location="http://localhost:80/CBM"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
