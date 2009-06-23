@@ -364,12 +364,6 @@
 	</CustomFolders>
 	<Files AutoFolders="PackageView">
 		<Folder
-			Name="com.khan.AppMain"
-			Type="Package">
-			<F N="src/com/khan/AppMain/Start.java"/>
-			<F N="src/com/khan/AppMain/SysConf.java"/>
-		</Folder>
-		<Folder
 			Name="com.khan.datetime"
 			Type="Package">
 			<F N="src/com/khan/datetime/SMPTime.java"/>
