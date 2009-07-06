@@ -380,7 +380,7 @@ public class SMPTime {
   }
 
 
-  public static long getDataTime(Date date){
+  public static long getDateTime(Date date){
     Calendar now = null;
     long d = 0;
     try{
