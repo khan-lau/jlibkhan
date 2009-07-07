@@ -374,7 +374,8 @@ public class SMPTime {
   public static Date str2Date(String sDate){
     try{  
       return DateFormat.getDateInstance().parse(sDate);  
-    }catch(ParseException e){  
+    }catch(Exception e){ 
+      e.printStackTrace();
       return null;  
     }   
   }
@@ -392,7 +393,29 @@ public class SMPTime {
              + 1000000L * now.get(Calendar.DATE)
              + 100000000L * (now.get(Calendar.MONTH) + 1)
              + 10000000000L * now.get(Calendar.YEAR);
-    }finally{
+    }catch (Exception e) {
+      e.printStackTrace();
+    } finally{
+      now  = null;
+    }
+    return d;
+  }
+
+
+  public static long getDateTime(Calendar date){
+    Calendar now = null;
+    long d = 0;
+    try{
+      now = date;
+      d = now.get(Calendar.SECOND)
+             + 100L * now.get(Calendar.MINUTE)
+             + 10000L * now.get(Calendar.HOUR_OF_DAY)
+             + 1000000L * now.get(Calendar.DATE)
+             + 100000000L * (now.get(Calendar.MONTH) + 1)
+             + 10000000000L * now.get(Calendar.YEAR);
+    }catch (Exception e) {
+      e.printStackTrace();
+    } finally{
       now  = null;
     }
     return d;
@@ -410,7 +433,9 @@ public class SMPTime {
   }
 
   public static void main(String[] args) { //test
-    System.out.println(getDatePart(20061206020701L, 20061206020638L));
+
+      System.out.println(  getDateTime( getCalendar(20090706025650L) ) );
+    //System.out.println(getDatePart(20061206020701L, 20061206020638L));
   }
 
 
