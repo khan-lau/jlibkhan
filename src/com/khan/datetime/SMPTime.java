@@ -365,7 +365,7 @@ public class SMPTime {
 
   public static boolean isValidDate(String sDate){
     try{  
-      return DateFormat.getDateInstance().parse(sDate)!=null;  
+      return DateFormat.getDateTimeInstance().parse(sDate)!=null;  
     }catch(ParseException e){  
       return false;  
     }   
@@ -373,7 +373,8 @@ public class SMPTime {
 
   public static Date str2Date(String sDate){
     try{  
-      return DateFormat.getDateInstance().parse(sDate);  
+        
+      return DateFormat.getDateTimeInstance().parse(sDate);  
     }catch(Exception e){ 
       e.printStackTrace();
       return null;  
@@ -436,6 +437,13 @@ public class SMPTime {
 
       System.out.println(  getDateTime( getCalendar(20090706025650L) ) );
     //System.out.println(getDatePart(20061206020701L, 20061206020638L));
+      String str = "2009-07-30 17:18:44";
+      System.out.println( str );
+      System.out.println(getDateTime(str2Date(str)) );
+
+
+
+
   }
 
 
