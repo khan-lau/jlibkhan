@@ -440,6 +440,7 @@ public class SMPTime {
       String str = "2009-07-30 17:18:44";
       System.out.println( str );
       System.out.println(getDateTime(str2Date(str)) );
+      System.out.println((getDay()*1000000) + "  " + (getNextDay()*1000000));
 
 
 
