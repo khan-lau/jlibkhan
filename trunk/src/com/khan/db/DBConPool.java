@@ -236,7 +236,12 @@ public class DBConPool {
 
   protected boolean login(DBPoolCon con) {
     boolean result = true;
-    String sqlstr = "select 1";
+    String sqlstr = "select 1 ";
+
+    if (DbDriver.indexOf("oracle") != -1) {
+      sqlstr = "select 1 from dual";
+    }
+    
     Statement stmt = null;
     ResultSet rs = null;
     try {
